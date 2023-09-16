@@ -1,0 +1,67 @@
+
+****About*****
+
+Welcome to my portfolio! I'm Kalumba Mweshi, a passionate web designer and developer from Lusaka, Zambia. With a solid understanding of various technologies such as HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL, I create appealing, responsive, and user-friendly websites and web applications.
+
+At 27 years old, I have a deep passion for programming and a knack for developing both frontend and backend applications. From simple static websites to complex content management systems (CMS) and dynamic database-driven web apps, I ensure that every project I work on is secure, easy to navigate, and visually impressive.
+
+As a skilled developer, I utilize my expertise in technologies like Git and jQuery to enhance the functionality and interactivity of web projects. With a focus on creating exceptional user experiences, I strive to build websites and web apps that leave a lasting impression.
+
+Explore my portfolio to see examples of my work, ranging from captivating ecommerce projects to hotel booking pages and hotel admin CMS panels. Each project showcases my dedication to crafting functional, visually appealing, and responsive solutions.
+
+I'm committed to delivering excellence in every project I undertake. Whether you need a new website, a web app, or assistance with an existing project, I'm here to turn your ideas into reality. Let's collaborate and bring your vision to life!
+
+
+
+
+
+****Services****
+
+Services I Offer:
+
+1. Frontend Design and Development:
+   Craft visually appealing and engaging frontend applications and websites that captivate users. I focus on creating seamless user experiences by implementing modern design principles and utilizing the latest frontend technologies.
+
+2. Backend Development:
+   Develop functional and secure backend applications for websites and web apps. With expertise in technologies like PHP and MySQL, I build robust systems that handle complex operations and ensure data integrity.
+
+3. Database Management Systems:
+   Design and implement relational database management systems using MySQL. I create efficient and structured databases to support your web applications, ensuring seamless data management and retrieval.
+
+4. Full-Stack Web Development:
+   Create complete database-driven web applications and content management systems. From concept to deployment, I handle both frontend and backend development, delivering comprehensive solutions tailored to your specific needs.
+
+I'm dedicated to providing top-notch services that meet your requirements and exceed expectations. Let's discuss your project and work together to achieve your goals.
+
+
+
+
+****Portfolio****
+
+Portfolio:
+
+1. Ecommerce Project:
+   Showcase your products and enable seamless online transactions with an engaging ecommerce website. I create custom ecommerce solutions that are visually appealing, user-friendly, and optimized for conversions.
+
+2. Hotel Booking Pages:
+   Develop interactive hotel booking pages that provide a seamless reservation experience for your customers. From room selection to payment processing, I create streamlined and intuitive booking interfaces.
+
+3. Hotel Admin CMS Panel:
+   Build a comprehensive content management system (CMS) for your hotel's backend operations. Manage bookings, update content, and gain full control over your website with a user-friendly admin panel.
+
+These are just a few examples of the projects I have worked on. Each project demonstrates my commitment to delivering high-quality, customized solutions that align with my clients' objectives. Contact me to discuss your project requirements and let's create something extraordinary together.
+
+
+
+****Contact****
+
+Contact Me:
+
+I'm available to discuss your project requirements and answer any questions you may have. Reach out to me using the contact details below:
+
+Name: Kalumba Mweshi
+Email: [Your Email Address]
+Phone: [Your Phone Number]
+
+Please feel free to contact me via email or phone. I'm excited to learn more about your project and explore how we can collaborate to bring your ideas to life. Let's create something remarkable together!
+
