@@ -43,7 +43,7 @@ ob_start();
   </div>
   <!--/ Intro Skew End /-->
 
-  <section id="about" class="about-mf sect-pt4 route mb-5">
+  <section id="about" class="about-mf sect-pt4 route mb-5 rounded">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -103,7 +103,7 @@ ob_start();
             <p class="subtitle-a">
               Here are the services I offer.
             </p>
-            <div class="line-mf"></div>
+            <div class="ine-mf"></div>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@ ob_start();
           ?>
         <div class="col-md-6">
           <div class="service-box">
-            <div class="service-ico">
+            <div class="service-ico mb-4">
               <span class="ico-circle"><?= html_entity_decode($row['icon']) ?></span>             
             </div>
             <div class="service-content">
@@ -344,10 +344,10 @@ ob_start();
                   </div>
                   <div class="socials">
                     <ul>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
-                      <li><a href="" ><span class="ico-circle"><i class="ion-social-whatsapp"></i></span></a></li>
+                      <li><a href=""><span class="ico-circle mr-2"><i class="ion-social-facebook"></i></span></a></li>
+                      <li><a href=""><span class="ico-circle mr-2"><i class="ion-social-instagram"></i></span></a></li>
+                      <li><a href=""><span class="ico-circle mr-2"><i class="ion-social-twitter"></i></span></a></li>
+                      <li><a href="" ><span class="ico-circle mr-2"><i class="ion-social-whatsapp"></i></span></a></li>
                     </ul>
                   </div>
                 </div>

@@ -159,12 +159,12 @@ a:hover {
   color: #4e4e4e;
 }
 
-.line-mf {
+/*.line-mf {
   width: 40px;
   height: 5px;
-  background-color: #0078ff;
+  background-color: #082c5c;
   margin: 0 auto;
-}
+}*/
 
 /*--/ Title Left /--*/
 
@@ -177,14 +177,7 @@ a:hover {
   position: relative;
 }
 
-.title-left:before {
-  content: '';
-  position: absolute;
-  height: 3px;
-  background-color: #0078ff;
-  width: 100px;
-  bottom: -12px;
-}
+
 
 /*------/ Box /------*/
 
@@ -195,6 +188,7 @@ a:hover {
 .box-shadow-full {
   padding: 3rem 1.25rem;
   position: relative;
+  border-radius: 1rem;
   background-color: #fff;
   margin-bottom: 3rem;
   z-index: 2;
@@ -217,14 +211,15 @@ a:hover {
   font-size: 1.7rem;
   border-radius: 50%;
   line-height: 1.4;
-  margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #0078ff;
+  color: #fff;
+  background-color: #082c5c;
+  box-shadow: 0 0 0 3px #082c5c;
   transition: all 500ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #082c5c;
-  color: #fff;
+
+ 
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
 }
@@ -239,7 +234,6 @@ margin-left: 8px;
   background: #fff;
   width: 44px;
   height: 44px;
- 
   line-height: 0;
   font-size: 40px;
   border-radius: 50%;
@@ -247,7 +241,6 @@ margin-left: 8px;
   bottom: 15px;
   transition: background 0.5s;
   z-index: 11;
- 
   font-size: 2.0rem;
   border-radius: 50%;
   line-height: 1.4;
@@ -276,7 +269,7 @@ margin-left: 8px;
 }
 
 .list-ico span {
-  color: #0078ff;
+  color: #082c5c;
   margin-right: 10px;
 }
 
@@ -286,11 +279,11 @@ margin-left: 8px;
   height: 100px;
   width: 100px;
   font-size: 2rem;
-  border-radius: 50%;
+  border-radius: 15%;
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #0078ff;
+  box-shadow: 0 0 0 10px #082c5c;
   display: block;
 }
 
@@ -377,7 +370,6 @@ margin-left: 8px;
   background: #fff;
   width: 44px;
   height: 44px;
- 
   line-height: 0;
   font-size: 48px;
   border-radius: 50%;
@@ -776,17 +768,8 @@ margin-left: 8px;
   color: #4e4e4e;
 }
 
-.skill-mf .progress {
-  background-color: #cde1f8;
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #0078ff;
-}
+
 
 /*======================================
 //--//-->   SERVICES
@@ -799,12 +782,7 @@ margin-left: 8px;
   margin-bottom: 3rem;
 }
 
-.service-box:hover .ico-circle {
-  transition: all 500ms ease;
-  color: #fff;
-  background-color: #082c5c;
-  box-shadow: 0 0 0 10px #cde1f8;
-}
+
 
 .service-box .service-ico {
   margin-bottom: 1rem;
@@ -861,6 +839,7 @@ margin-left: 8px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
+  border-radius: 1rem;
 }
 
 .work-box:hover img {
@@ -891,13 +870,13 @@ margin-left: 8px;
 }
 
 .work-content .w-like {
-  font-size: 2.5rem;
-  color: #0078ff;
+  font-size: 1.744rem;
+  color: #082c5c;
   float: right;
 }
 
 .work-content .w-like a {
-  color: #0078ff;
+  color: #082c5c;
 }
 
 .work-content .w-like .num-like {
@@ -908,53 +887,13 @@ margin-left: 8px;
   font-size: 1.2rem;
 }
 
-/*======================================
-//--//-->   TESTIMONIALS
-======================================*/
-
-.testimonials .owl-carousel .owl-item img {
-  width: auto;
-}
-
-.testimonial-box {
-  color: #fff;
-  text-align: center;
-}
-
-.testimonial-box .author-test {
-  margin-top: 1rem;
-}
-
-.testimonial-box .author-test img {
-  margin: 0 auto;
-}
-
-.testimonial-box .author {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 1rem 0;
-  display: block;
-  font-size: 1.4rem;
-}
-
-.testimonial-box .comit {
-  font-size: 2rem;
-  color: #0078ff;
-  background-color: #fff;
-  width: 52px;
-  height: 52px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  line-height: 1.6;
-}
 
 /*======================================
 //--//-->   BLOG
 ======================================*/
 
 .card-blog .card-body {
+  border-radius: 1rem;
   position: relative;
 }
 
@@ -973,7 +912,7 @@ margin-left: 8px;
   color: #fff;
   padding: 0 15px 5px;
   overflow: hidden;
-  background-color: #0078ff;
+  background-color: #082c5c;
   border-radius: 4px;
 }
 
