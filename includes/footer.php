@@ -2,7 +2,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="copyright-box">
-              <p class="copyright">&copy; Copyright <strong>KaluFolio</strong>. All Rights Reserved 2023.</p>
+              <p class="copyright">Developed by <strong>Kalu</strong>. All Rights Reserved 2023.</p>
               <div class="credits">
               
                 

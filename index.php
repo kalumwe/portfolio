@@ -5,7 +5,7 @@ ob_start();
  require_once './includes/utility_funcs.php';
 
  $conn = dbConnect('read', 'pdo', "db1");
- $qry = $conn->query("SELECT *, CONCAT(first_name, ' ', last_name) AS name FROM about_me LIMIT 1");
+ $qry = $conn->query("SELECT *, CONCAT(first_name, ' ', last_name) AS name FROM about_me LIMIT 1, 1");
  foreach ($qry->fetch() as $key => $value) {
           $meta[$key] = $value;
   }
@@ -18,12 +18,12 @@ ob_start();
 </head>
 
 <body id="page-top">
-  <!--/ Nav Star /-->
+  <!-- Nav -->
     <?php include'./includes/nav.php'; ?>
-  <!--/ Nav End /-->
+  <!-- Nav End -->
 
-  <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image mb-5" >
+  <!-- Intro -->
+  <div id="home" class="intro route bg-imag mb-5" >
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -33,15 +33,13 @@ ob_start();
           <h1 class="intro-title mb-4">I am <?php echo isset($meta['name']) ? sanitize($meta['name']) : ''; ?></h1>
           <p class="intro-subtitle"><span class="text-slider-items"><?php echo isset($meta['skills']) ? sanitize($meta['skills']) : ''; ?></span><strong class="text-slider"></strong></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-          
           <div class="intro-grid"></div>
           <div id="intro-grid2"></div>
-
         </div>
       </div>
     </div>
   </div>
-  <!--/ Intro Skew End /-->
+  <!-- Intro End-->
 
   <section id="about" class="about-mf sect-pt4 route mb-5 rounded">
     <div class="container">
@@ -91,7 +89,7 @@ ob_start();
     </div>
   </section>
 
-  <!--/ Section Services Star /-->
+  <!-- Services Section -->
   <section id="service" class="services-mf route">
     <div class="container">
       <div class="row">
@@ -147,9 +145,9 @@ ob_start();
       </div>
     </div>
   </section>
-  <!--/ Section Services End /-->
+  <!-- Services Section End -->
 
-  <!--/ Section Portfolio Star /-->
+  <!--Portfolio Section  -->
   <section id="work" class="portfolio-mf sect-pt4 route">
     <div class="container">
       <div class="row">
@@ -203,9 +201,9 @@ ob_start();
       </div>
     </div>
   </section>
-  <!--/ Section Portfolio End /-->
+  <!-- Portfolio Section End -->
 
-  <!--/ Section Blog Star /-->
+  <!--Blog  Section -->
   <section id="blog" class="blog-mf sect-pt4 route">
     <div class="container">
       <div class="row">
@@ -273,9 +271,9 @@ ob_start();
       </div>
     </div>
   </section>
-  <!--/ Section Blog End /-->
+  <!-- Blog Section  End -->
 
-  <!--/ Section Contact-Footer Star /-->
+  <!-- Contact-Footer Section  -->
   <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/img3.jpg)">
     <div class="overlay-mf"></div>
     <div class="container">
@@ -287,7 +285,7 @@ ob_start();
                 <div class="col-md-6">
                   <div class="title-box-2">
                     <h5 class="title-left">
-                      Message Me
+                      Contact Me
                     </h5>
                   </div>
                   <div>
@@ -297,7 +295,7 @@ ob_start();
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please write your name at least 4 chars" />
                             <div class="validation"></div>
                           </div>
                         </div>
@@ -309,13 +307,13 @@ ob_start();
                         </div>
                         <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter subject at least 8 chars " />
                               <div class="validation"></div>
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write your message" placeholder="Message"></textarea>
                             <div class="validation"></div>
                           </div>
                         </div>
@@ -329,24 +327,26 @@ ob_start();
                 <div class="col-md-6 mt-4">
                   <div class="title-box-2 pt-4 pt-md-0">
                     <h5 class="title-left">
-                      Get in Touch
+                      Let's Chat
                     </h5>
                   </div>
-                  <div class="more-info">
-                    <p class="lead">
+                  <div class="more-info mb-5">
+                    <p class="lead mb-4">
                      <?= sanitize($meta['summary']) ?>
                     </p>
-                    <ul class="list-ico">
-                      <li><span class="ion-ios-location"></span>LUSAKA, ZAMBIA</li>
-                      <li><span class="ion-ios-telephone"></span><?= sanitize($meta['phone']) ?></li>
-                      <li><span class="ion-email"></span><?= sanitize($meta['email']) ?></li>
+                    <ul class="list-ico d-md-flex ">
+                      <!--<li><span class="ion-ios-location"></span>LUSAKA, ZAMBIA</li>-->
+                      <li class="mr-4"><span class="ion-ios-telephone mt-1"></span><?= sanitize($meta['phone']) ?></li>
+                      <li><span class="ion-email"></span><a href="mailto:"><?= sanitize($meta['email']) ?></a></li>
                     </ul>
                   </div>
-                  <div class="socials">
+                  <div class="socials d-flex justify-content-center">
                     <ul>
+                      <li><a href="https://www.linkedin.com/in/kalumba-mweshi-347b01251/">
+                        <span class="ico-circle mr-2 "><i class="ion-social-linkedin"></i></span></a></li>
+                      <li><a href="https://github.com/kalumwe">
+                        <span class="ico-circle mr-2"><i class="ion-social-github"></i></span></a></li>
                       <li><a href=""><span class="ico-circle mr-2"><i class="ion-social-facebook"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle mr-2"><i class="ion-social-instagram"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle mr-2"><i class="ion-social-twitter"></i></span></a></li>
                       <li><a href="" ><span class="ico-circle mr-2"><i class="ion-social-whatsapp"></i></span></a></li>
                     </ul>
                   </div>
@@ -361,7 +361,7 @@ ob_start();
       <?php include'./includes/footer.php'; ?>
     </footer>
   </section>
-  <!--/ Section Contact-footer End /-->
+  <!-- Contact-footer End -->
   <div id="whatsapp">
   <a href="#" ><span class="whatsapp"><i class="ion-social-whatsapp "></i></span></a>
 </div>
