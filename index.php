@@ -67,7 +67,7 @@ ob_start();
                       <p><span class="title-s">Profile: 
                       </span> <span><?php echo isset($meta['profile']) ? sanitize($meta['profile']) : ''; ?></span></p>
                       <p><span class="title-s">Email: </span> 
-                        <span><?php echo isset($meta['email']) ? sanitize($meta['email']) : ''; ?></span></p>
+                        <span class="my-email"><?php echo isset($meta['email']) ? sanitize($meta['email']) : ''; ?></span></p>
                       <p><span class="title-s">Phone: </span> 
                         <span><?php echo isset($meta['phone']) ? sanitize($meta['phone']) : ''; ?></span></p>
                     </div>
@@ -337,7 +337,7 @@ ob_start();
                     <ul class="list-ico d-md-flex ">
                       <!--<li><span class="ion-ios-location"></span>LUSAKA, ZAMBIA</li>-->
                       <li class="mr-4"><span class="ion-ios-telephone mt-1"></span><?= sanitize($meta['phone']) ?></li>
-                      <li><span class="ion-email"></span><a href="mailto:"><?= sanitize($meta['email']) ?></a></li>
+                      <li><span class="ion-email"></span><a href="mailto:" class="my-email"><?= sanitize($meta['email']) ?></a></li>
                     </ul>
                   </div>
                   <div class="socials d-flex justify-content-center">

@@ -751,6 +751,10 @@ margin-left: 8px;
     box-shadow: 0 0 0 7.44px #e1e7ee;
 }
 
+.my-email {
+  color: #0078ff;
+}
+
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -1119,8 +1123,8 @@ footer .credits a {
 ======================================*/
 
 #sendmessage {
-  color: #0078ff;
-  border: 1px solid #0078ff;
+  color: #00ff6a;
+  border: 1px solid #00ff6a;
   display: none;
   text-align: center;
   padding: 15px;

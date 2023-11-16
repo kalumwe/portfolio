@@ -1,11 +1,10 @@
 <?php
 /*Prompting a User to Download a pdf file */
 
-
 // define error page (one of part to be changed)
 $error = 'http://localhost/myfolio/error.php';
 // define the path to the download folder(other part to be changed)
-$filepath = './CV/';
+$filepath = '../CV/';
 
 $getfile = NULL;
 
