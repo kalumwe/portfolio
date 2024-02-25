@@ -2,7 +2,11 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="copyright-box">
-              <p class="copyright">Developed by <strong>Kalu</strong>. All Rights Reserved 2023.</p>
+              <p class="copyright">Developed by <strong>Kalu</strong>. All Rights Reserved <?php
+$currentYear = date('Y');
+echo "$currentYear";
+?>
+.</p>
               <div class="credits">
               
                 

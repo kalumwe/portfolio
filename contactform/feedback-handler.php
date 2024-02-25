@@ -12,7 +12,6 @@ require_once('../includes/functions.php');
 define('ERROR_LOG','../logs/errors.log');
 
 
-// set the error and thank you pages
 //initialize variables    
     $formurl = "./index.php#contact" ;  
     $contacturl = "./contact.php#contact";
@@ -98,9 +97,9 @@ $mail->Port       = 465;                                    //TCP port to connec
     "Name of sender: " . $validName . "<br>" .
     "Email of sender: " .$uemail. "<br>" .
     "Subject: " .$subJct. "<br>" .
-    "------------------------- MESSAGE -----------------------<br>" .
+    "-- MESSAGE --<br>" .
     $msg .
-    "<br>------------------------------------------------------------<br>" ;
+    "<br>----------------------------------------------------------<br>" ;
 
     $mail->setFrom($uemail, 'Sender Name');
     $mail->addAddress($mailto, 'Recipient Name');
@@ -112,6 +111,15 @@ $mail->Port       = 465;                                    //TCP port to connec
    if ($mail->send()) {
       echo "
       <script>
+      var form = document.getElementById('send-mail'); 
+      var inputs = form.getElementsByTagName('input');
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = ''; 
+      }
+      var textareas = form.getElementsByTagName('textarea');
+      for (var i = 0; i < textareas.length; i++) {
+        textareas[i].value = ''; 
+      }
        var element = document.getElementById('sendmessage');
        if (element) {
         element.style.display = 'block';
@@ -119,11 +127,9 @@ $mail->Port       = 465;                                    //TCP port to connec
        function hideElement() {
            element.style.display = 'none';
        }
-      setTimeout(hideElement, 3440);
+      setTimeout(hideElement, 4440);
        document.getElementById('errormessage').style.display = 'none';
-       setTimeout(function () {
-        location.reload();
-       }, 2244);
+      
     </script>";
     } else {
       echo 'Email could not be sent. Error: ' . $mail->ErrorInfo;

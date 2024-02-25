@@ -5,7 +5,7 @@ ob_start();
  require_once './includes/utility_funcs.php';
 
  $conn = dbConnect('read', 'pdo', "db1");
- $qry = $conn->query("SELECT *, CONCAT(first_name, ' ', last_name) AS name FROM about_me LIMIT 1, 1");
+ $qry = $conn->query("SELECT *, CONCAT(first_name, ' ', last_name) AS name FROM about_me LIMIT 0, 1");
  foreach ($qry->fetch() as $key => $value) {
           $meta[$key] = $value;
   }
@@ -15,6 +15,23 @@ ob_start();
 <html lang="en">
 <head>
  <?php include'./includes/head.php'; ?>
+ <style>
+  .skill-image {
+    transition: transform 1.3s ease;
+  }
+  .shake-animation {
+  animation: shake 1.3s infinite alternate;
+}
+
+@keyframes shake {
+  from {
+    transform: translateX(-4.4px);
+  }
+  to {
+    transform: translateX(4.4px);
+  }
+}
+  </style>
 </head>
 
 <body id="page-top">
@@ -88,6 +105,112 @@ ob_start();
       </div>
     </div>
   </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Skills
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">      
+         <?php
+            $sql = "SELECT * FROM skills WHERE category = 'frontend'";
+            $result = $conn->query($sql);
+            $error = $conn->errorInfo()[2];
+            if($result->rowCount() > 0) {       
+          ?>
+        <div class="col-md-6">
+        <h3 class="s-title text-center">Frontend</h3>
+          <div class="service-box">
+            <div class="service-content">
+              
+              <?php 
+                  while($row = $result->fetch()) {   ?>
+              <a href="<?= sanitize($row['link_url']) ?>" target="_blank" rel="noreferrer">
+                 <img src="<?= sanitize($row['img_url']) ?>" class="skill-image m-1" alt="<?= sanitize($row['name']) ?>" width="80" height="80"/> </a>
+                 <?php } ?>
+            </div>
+          </div>         
+        </div>
+       <?php
+        }?>
+
+<?php
+            $sql = "SELECT * FROM skills WHERE category = 'backend'";
+            $result = $conn->query($sql);
+            $error = $conn->errorInfo()[2];
+            if($result->rowCount() > 0) {       
+          ?>
+        <div class="col-md-6">
+        <h3 class="s-title text-center">Backend</h3>
+          <div class="service-box">
+            <div class="service-content">
+              <?php 
+                  while($row = $result->fetch()) {   ?>
+              <a href="<?= sanitize($row['link_url']) ?>" target="_blank" rel="noreferrer">
+                 <img src="<?= sanitize($row['img_url']) ?>" class="skill-image m-1" alt="<?= sanitize($row['name']) ?>" width="83" height="83"/> </a>
+                 <?php } ?>
+            </div>
+          </div>         
+        </div>
+       <?php  
+        }?>
+		
+		<?php
+            $sql = "SELECT * FROM skills WHERE category = 'other'";
+            $result = $conn->query($sql);
+            $error = $conn->errorInfo()[2];
+            if($result->rowCount() > 0) {       
+          ?>
+        <div class="col-md-6">
+        <h3 class="s-title text-center">Other Technologies</h3>
+          <div class="service-box">
+            <div class="service-content ">
+              <?php 
+                  while($row = $result->fetch()) {   ?>
+              <a href="<?= sanitize($row['link_url']) ?>" target="_blank" rel="noreferrer">
+                 <img src="<?= sanitize($row['img_url']) ?>" class="skill-image m-1" alt="<?= sanitize($row['name']) ?>" width="80" height="80"/> </a>
+                 <?php } ?>
+            </div>
+          </div>         
+        </div>
+       <?php  
+        }?>
+		
+		<?php
+            $sql = "SELECT * FROM skills WHERE category = 'database'";
+            $result = $conn->query($sql);
+            $error = $conn->errorInfo()[2];
+            if($result->rowCount() > 0) {       
+          ?>
+        <div class="col-md-6">
+        <h3 class="s-title text-center">Database Systems</h3>
+          <div class="service-box">
+            <div class="service-content d-flex justify-content-center">
+              <?php 
+                  while($row = $result->fetch()) {   ?>
+              <a href="<?= sanitize($row['link_url']) ?>" target="_blank" rel="noreferrer">
+                 <img src="<?= sanitize($row['img_url']) ?>" class="skill-image m-1" alt="<?= sanitize($row['name']) ?>" width="84" height="84"/> </a>
+                <?php } ?>
+            </div>
+          </div>         
+        </div>
+       <?php  
+        }?>
+
+    
+       </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills Section End -->
+  
 
   <!-- Services Section -->
   <section id="service" class="services-mf route">
@@ -366,10 +489,24 @@ ob_start();
   <a href="#" ><span class="whatsapp"><i class="ion-social-whatsapp "></i></span></a>
 </div>
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
+  <div id="preloade"></div>
 
 
 </body>
+
+<script>
+ $(document).ready(function() {
+  $('.skill-image').hover(
+    function() {
+      $(this).addClass('shake-animation');
+    },
+    function() {
+      $(this).removeClass('shake-animation');
+    }
+  );
+});
+</script>
+
 </html>
 
 <?php 
