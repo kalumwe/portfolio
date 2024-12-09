@@ -1,0 +1,44 @@
+
+  .skill-image {
+    transition: transform 1.3s ease;
+  }
+  .shake-animation {
+  animation: shake 1.3s infinite alternate;
+}
+
+@keyframes shake {
+  from {
+    transform: translateX(-4.4px);
+  }
+  to {
+    transform: translateX(4.4px);
+  }
+}
+
+#chatbox {
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+  
+#chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chat-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#send-button {
+    padding: 10px;
+}

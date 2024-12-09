@@ -22,3 +22,4 @@
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/my_styles.css" rel="stylesheet">
